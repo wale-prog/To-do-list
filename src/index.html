@@ -2,10 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <script src="https://kit.fontawesome.com/93af04f6a5.js" crossorigin="anonymous"></script>  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet"> 
     <title>Webpack Exercise</title>
 </head>
 <body>
-    <h1>Hello webpack!</h1>
+    <div class="container">
+        <div class="heading">
+            <h2 class="todo-heading">Today's To Do</h2>
+            <i class="fa-solid fa-arrows-rotate"></i>
+        </div> 
+
+        <hr class="line">
+        <div class="input-div">
+            <input type="text" class="input" placeholder="Add to your list...">
+            <i class="fa-thin fa-arrow-turn-down-left return"></i>
+        </div>
+        
+        <hr class="line">
+        <ul class="list"></ul>
+        <p class="clear">Clear all completed</p>     
+    </div>
+    
 </body>
 </html>
