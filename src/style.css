@@ -1,4 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 
 body {
-    background-color: bisque;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f6f6f6;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0 0 15px;
+  padding-top: 12px;
+  margin-top: 25vh;
+  background-color: #fff;
+}
+
+.sample {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sample i {
+  position: relative;
+  top: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.todo-heading {
+  margin-bottom: 12px;
+}
+
+.list {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.checkbox {
+  margin: 0 12px;
+}
+
+.line {
+  color: #d3d3d3;
+  opacity: 0.75;
+}
+
+.input {
+  border: none;
+  margin-left: 12px;
+  font-style: italic;
+  padding: 12px;
+}
+
+.container h2 {
+  opacity: 0.75;
+  font-size: 16px;
+  margin-top: 24px;
+  margin-left: 12px;
+}
+
+.clear {
+  background-color: #f6f6f6;
+  cursor: pointer;
+  text-align: center;
+  padding: 24px;
+}
+
+.span {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.span p {
+  padding: 0;
+  margin: 0;
+}
+
+.more {
+  margin-left: auto;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.return {
+  position: relative;
+  left: 0;
+  z-index: 5;
+  width: 20%;
 }
