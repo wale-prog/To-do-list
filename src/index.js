@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 import './style.css';
 import { newTask } from './modules/to-do-UI';
 import { deleteItem } from './modules/removeItem';
@@ -10,7 +9,7 @@ inputField.addEventListener('keydown', (event) => {
     dynamicLI();
     deleteItem();
   } else {
-    return dynamicLI();
+    dynamicLI();
   }
 });
 

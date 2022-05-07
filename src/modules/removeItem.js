@@ -1,6 +1,4 @@
-/* eslint-disable import/no-mutable-exports */
-/* eslint-disable operator-assignment */
-export let tasks = JSON.parse(localStorage.getItem('tasks')) || [];
+export const tasks = JSON.parse(localStorage.getItem('tasks')) || [];
 
 export function deleteItem() {
   const removebtn = document.querySelectorAll('.icon');
@@ -14,10 +12,11 @@ export function deleteItem() {
       const removedArry = tasks.filter((task) => task.description === removedItem);
       for (let i = 0; i < tasks.length; i += 1) {
         if (tasks[i].index > removedArry[0].index) {
-          tasks[i].index = tasks[i].index - 1;
+          const newIndex = tasks[i].index - 1;
+          tasks[i].index = newIndex;
         }
       }
-      tasks = tasks.filter((task) => task.description !== removedItem);
+      tasks.filter((task) => task.description !== removedItem);
       localStorage.setItem('tasks', JSON.stringify(tasks));
     });
   });

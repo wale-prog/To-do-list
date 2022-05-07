@@ -1,4 +1,3 @@
-/* eslint-disable import/extensions */
 /* eslint-disable consistent-return */
 
 import Task from './AddTask';
