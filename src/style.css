@@ -102,9 +102,9 @@ body {
 }
 
 .hidden {
-  display: none
+  display: none;
 }
 
-.highlight{
+.highlight {
   background-color: #fbfecd;
 }
