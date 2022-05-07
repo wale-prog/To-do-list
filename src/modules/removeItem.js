@@ -8,7 +8,8 @@ export function deleteItem(){
             const clickedItem = event.target.parentNode.parentNode;    
             itemContainer.removeChild(clickedItem);
             
-            const removedItem = event.target.previousElementSibling.previousElementSibling.textContent;   
+            const removedItem = event.target.previousElementSibling.previousElementSibling.textContent;  
+            console.log(removedItem) 
               
               let removedArry = tasks.filter((task) => 
                 task.description === removedItem)
@@ -17,17 +18,15 @@ export function deleteItem(){
                     if (tasks[i].index > removedArry[0].index){
                         tasks[i].index = tasks[i].index - 1;
                     };
-                }
-                
+                }                
             console.log(removedArry[0].index)
-            console.log(tasks)
-            
-            tasks = tasks.filter((task) => task.description !== removedItem);
-
+            tasks = tasks.filter((task) => task.description !== removedItem);           
             localStorage.setItem('tasks', JSON.stringify(tasks))
         })
         
     })
     
 }
+
+deleteItem();
 

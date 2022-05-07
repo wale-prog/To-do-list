@@ -1,6 +1,9 @@
 import Task from "./AddTask";
-import {deleteItem,tasks} from "./removeItem";
-import dynamicLI from './dynamicUI'
+import {tasks} from "./removeItem";
+import dynamicLI from "./dynamicUI";
+import { deleteItem } from "./removeItem";
+
+
 
   
 function listItems (task) {
@@ -37,6 +40,8 @@ function listItems (task) {
     list.append(li);
 };
 
+export default listItems;
+
 export function newTask () {
     let inputField = document.querySelector('.input');
     inputField.addEventListener('keydown', (event) =>{
@@ -46,11 +51,11 @@ export function newTask () {
             if (inputValue === ''){
                 return false;
             }
-            const task = new Task(inputValue, false, tasks.length + 1 );
-            listItems(task);          
-            tasks.push(task);       
-            dynamicLI() 
-            deleteItem();      
+            const task = new Task(inputValue, false, tasks.length + 1 );            
+            listItems(task);                      
+            tasks.push(task);            
+            
+            deleteItem()
             return localStorage.setItem('tasks', JSON.stringify(tasks)); 
                     
         };                     
@@ -58,14 +63,14 @@ export function newTask () {
     
 }
 
-// newTask()
+newTask()
 
 tasks.forEach((element) => {
     listItems(element);
 });
 
 
-export default listItems;
+
 
 
 
